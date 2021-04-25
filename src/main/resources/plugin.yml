@@ -1,0 +1,14 @@
+name: Battleroyale
+version: ${project.version}
+main: me.lubek.battleroyale.Battleroyale
+api-version: 1.16
+authors: [ lubek ]
+description: Battle Royale
+softdepend: [HolographicDisplays]
+commands:
+  holo:
+    description: test
+    usage: /<command>
+  clearall:
+    description: test
+    usage: /<command>
