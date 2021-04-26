@@ -1,2 +1,1 @@
 # Battle Royale
-### Coming soon
