@@ -81,12 +81,6 @@
             <version>2.4.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>me.lubek.actionbarpai</groupId>
-            <artifactId>API</artifactId>
-            <scope>system</scope>
-            <version>1.0</version>
-            <systemPath>C:/Users/Borys/Desktop/Plugins/Dependencies/API.jar</systemPath>
-        </dependency>
+
     </dependencies>
 </project>
