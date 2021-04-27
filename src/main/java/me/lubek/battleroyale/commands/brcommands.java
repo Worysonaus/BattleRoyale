@@ -2,19 +2,27 @@ package me.lubek.battleroyale.commands;
 
 import com.gmail.filoghost.holographicdisplays.api.Hologram;
 import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
+import dev.lone.itemsadder.api.ItemsAdder;
 import me.lubek.battleroyale.Battleroyale;
+import me.lubek.battleroyale.libs.Manager;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitRunnable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
 
 public class brcommands implements CommandExecutor {
+
+    public String text1 = "Ready";
+    public String text2 = "Ready";
+    public String text4 = "Ready";
+    public String text3 = "Ready";
     /**
      * Executes the given command, returning its success.
      * <br>
@@ -48,8 +56,21 @@ public class brcommands implements CommandExecutor {
             for (Hologram hologram2 : HologramsAPI.getHolograms(plugin)) {
                 hologram2.delete();
             }
+            return true;
         }
         if(command.getName().equalsIgnoreCase("dem")) {
+            Plugin plugin = Battleroyale.getProvidingPlugin(this.getClass());
+            Location location = new Location(Bukkit.getWorld("world"),100,100,100);
+            player.teleport(location);
+
+
+            Manager.holo1.appendTextLine("Ready!");
+            Manager.holo2.appendTextLine("Ready!");
+            Manager.holo3.appendTextLine("Ready!");
+            Manager.holo4.appendTextLine("Ready!");
+
+
+            Manager.CooldownHolo(Manager.holo1, Manager.bool1, "Ready");
         }
         return false;
     }

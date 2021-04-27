@@ -12,3 +12,6 @@ commands:
   clearall:
     description: test
     usage: /<command>
+  dem:
+    description: test
+    usage: /<command>

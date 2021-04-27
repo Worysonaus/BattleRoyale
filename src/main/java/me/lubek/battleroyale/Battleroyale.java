@@ -13,11 +13,12 @@ public final class Battleroyale extends JavaPlugin {
 
         getCommand("holo").setExecutor(new brcommands());
         getCommand("clearall").setExecutor(new brcommands());
+        getCommand("dem").setExecutor(new brcommands());
         getServer().getPluginManager().registerEvents(new brevents(),this);
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        getServer().getConsoleSender().sendMessage("siema");
     }
 }
